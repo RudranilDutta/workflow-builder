@@ -1,16 +1,58 @@
-# React + Vite
+# ⚡ Workflow Builder (React Flow)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
+A visual workflow builder that allows users to create, configure, and simulate workflows using a node-based interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- Drag-and-drop workflow canvas (React Flow)
+- Multiple node types:
+  - Start
+  - Task
+  - Approval
+  - Automated
+  - End
+- Dynamic node configuration forms
+- Metadata support (Start node)
+- Dynamic API-driven parameters (Automated node)
+- Workflow simulation panel
+- Validation of workflow structure
+- Clean modular architecture
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
+- React (Vite)
+- React Flow
+- Zustand (State Management)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Architecture
+- Centralized state using Zustand
+- Each node maintains a `config` object for dynamic data
+- Modular structure:
+  - components (canvas, sidebar, nodes, forms)
+  - store
+  - api
+  - utils
+- Scalable design to support new node types
+
+---
+
+## 🔄 Workflow Simulation
+- Serializes the workflow graph
+- Processes nodes sequentially
+- Displays procedure by procedure execution output
+
+
+## ⚙️ Setup Instructions
+
+```bash
+npm install
+npm run dev
+
+## 🌐 Live Demo
+
+https://workflow-builder-eta-dusky.vercel.app/
